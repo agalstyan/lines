@@ -7,8 +7,8 @@ function autoload($class_name)
 	if (!file_exists($ordinary_filename) || !include($ordinary_filename)) {
 		$namespace_classname = str_replace('\\', DIRECTORY_SEPARATOR, $ordinary_classname);
 		$namespace_filename = LIBDIR . $namespace_classname . ".php";
-		if (!include($namespace_filename)) {
-//			d(debug_print_backtrace());
+		if (!file_exists($namespace_filename) || !include($namespace_filename)) {
+//			debug_print_backtrace();
 		}
 	}
 }

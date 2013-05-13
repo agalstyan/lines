@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Figures;
+namespace App\Figure;
 
 /**
  * @package
@@ -9,5 +9,5 @@ namespace App\Figures;
  */
 interface IFigure
 {
-  	public function draw();
+  	public function construct();
 }

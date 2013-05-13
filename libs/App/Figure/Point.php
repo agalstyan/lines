@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Figures;
+namespace App\Figure;
 
 /**
  *
@@ -49,7 +49,16 @@ class Point implements IFigure
 		return $this->_y;
 	}
 
-	public function draw()
+	/**
+	 * Get coordinates
+	 * @return array
+	 */
+	public function getCoordinates()
+	{
+		return array('x' => $this->_x, 'y' => $this->_y);
+	}
+
+	public function construct()
 	{
 
 	}
